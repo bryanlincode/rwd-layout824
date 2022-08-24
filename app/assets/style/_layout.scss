@@ -1,0 +1,213 @@
+
+  // pc 1296px + 24gutter = 1320 px
+  // pad 696px + 24gutter = 720px 
+  // mobile 349px + 24gutter = 373px
+
+
+  .main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .menu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 64px;
+    li{
+      a{
+        padding: 25px 0;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    @include mobile {
+      display: none ;
+      gap: 0;
+      width: 100%;
+      li{
+        width: 48%;       
+        text-align: center;
+        a{
+          padding: 12px 0;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      &.active{
+        display: inline-flex;
+      }
+    }
+  }
+
+  .activt{
+    display: inline-block;
+  }
+
+  .logo{
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .ham-icon{
+    display: none;
+    @include mobile {
+      display: inline-block;
+    }
+  }
+
+  // footer
+
+  .footerBox{
+   padding-top: $spacer * 6;
+   padding-bottom:  $spacer * 4;
+  @include pad {
+    padding-top: $spacer * 6;
+    padding-bottom:  $spacer * 5;
+  } 
+   @include mobile{
+  padding-top: $spacer * 3;
+   padding-bottom:  $spacer * 3;
+   }
+  }
+
+  .footerNav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: $spacer * 4;
+
+    @include mobile {
+      margin-bottom: $spacer * 3;
+    }
+  }
+
+  .footerMenu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacer * 6;
+    margin-bottom: 35px;
+    a{
+      line-height: $spacer * 3;
+      font-size: $spacer * 2;
+      padding-top: 12px;
+    }
+    @include pad{
+      a{
+        padding-top: 4px;
+      }
+    }
+
+    @include mobile{
+      display: none;
+    }
+  }
+
+  .community{
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacer * 4;
+    img{
+      width: $spacer * 6;
+    }
+    @include pad{
+      gap: $spacer * 3;
+      img{
+        width: 4$spacer * 5;
+        }
+      }
+    @include mobile{
+      gap: $spacer ;
+      img{
+        width: $spacer * 3;
+      }
+    }  
+  }
+
+
+.tel{
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacer ;
+  span{
+    font-size: $spacer * 5;
+    margin-right: 22px;
+  }
+  @include mobile{
+    span{
+      font-size: $spacer * 3;
+      margin-right: 10px;
+    }
+    h3{
+      font-size: $spacer * 2;
+      line-height: $spacer * 3;
+    }
+  }
+}
+
+.mail{
+  display: flex;
+  align-items: center;
+  span{
+    font-size: $spacer * 5;
+    margin-right: 22px;
+  }
+  @include mobile{
+    span{
+      font-size: $spacer * 2;
+      margin-right: 10px;
+    }
+    h3{
+      font-size: $spacer * 2;
+      line-height: $spacer * 3;
+    }
+  }
+}
+
+
+.line-w{
+  border: 1px solid;
+  margin-bottom: $spacer * 4;
+
+  @include mobile{
+    margin-bottom: $spacer * 2;
+  }
+}
+ 
+.footerMessage{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  p{
+    font-size: $spacer * 2;
+    line-height: $spacer * 3;
+  }
+
+  @include mobile{
+    p{
+      margin-bottom: $spacer ;
+    }
+  }
+}
+
+.serviceMessage{
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacer * 6;
+  a{
+    font-size: $spacer * 2;
+    line-height: $spacer * 3;
+  }
+
+  @include mobile {
+    gap: 0px;
+    li{
+      width: 100%;
+      padding-bottom: $spacer;
+    }
+  }
+}
+  
