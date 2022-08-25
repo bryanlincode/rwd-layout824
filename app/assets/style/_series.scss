@@ -1,0 +1,226 @@
+.topMenuBg {
+
+  .container {
+    @include pad {
+      max-width: 100%;
+      padding: 0px 0px;
+    }
+
+    .topMenu {
+      display: flex;
+
+      li {
+
+        width: 33.333%;
+        text-align: center;
+        border: 1px solid #DCDCDC;
+        border-bottom: none;
+
+        a {
+          padding: $spacer*3 0;
+          color: black;
+          line-height: $spacer * 6;
+          font-size: $spacer * 4;
+          font-weight: 500;
+          display: block;
+
+          &.active {
+            border-bottom: 8px solid $nowColor;
+          }
+
+          &:hover {
+            border-bottom: 8px solid $nowColor;
+          }
+
+          @include pad {
+            padding: $spacer*2 0;
+          }
+
+          @include mobile {
+            line-height: $spacer * 3;
+            font-size: $spacer * 2;
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+.seriesBannerList {
+  display: flex;
+
+  .seriesBanner-a {
+    background-image: url("../images/product-header-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 296px;
+    width: 50%;
+
+    @include pad {
+      background-image: url('../images/product-header-sm-1.png');
+    }
+
+    @include mobile {
+      height: 136px;
+    }
+  }
+
+  .seriesBanner-b {
+    background-image: url('../images/product-header-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 296px;
+    width: 50%;
+
+    @include pad {
+      background-image: url('../images/product-header-sm-2-cut.png');
+    }
+
+    @include mobile {
+      height: 136px;
+    }
+  }
+}
+
+.celluloid {
+
+  .container {
+    padding-top: $spacer * 10;
+
+    .celluloidProduct {
+      h2 {
+        font-size: 42px;
+        line-height: 63px;
+        text-align: center;
+        @include mobile{
+            font-size: $spacer * 3;
+            line-height: 36px;
+        }
+      }
+
+      .celluloidTitle {
+        font-size: $spacer * 4;
+        line-height: $spacer * 6;
+        text-align: center;
+        margin-bottom: $spacer * 4;
+         @include mobile{
+            font-size: $spacer * 3;
+            line-height: 36px;
+        }
+      }
+
+      .celluloidList {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+          width: 23%;
+          padding: 0 12px;
+          margin-bottom: $spacer * 10;
+
+          @include pad {
+            width: 48%;
+            margin-bottom: $spacer * 5;
+
+          }
+
+          @include mobile {
+            width: 100%;
+            padding: 0px;
+             margin-bottom: $spacer * 3;
+          }
+        }
+
+        .describeTitle {
+          display: flex;
+          justify-content: space-between;
+
+          p {
+            font-size: $spacer * 3;
+            line-height: 36px;
+          }
+
+          .priceColor {
+            color: $nowColor;
+          }
+        }
+      }
+
+      .productColor {
+        display: flex;
+
+        .color-a {
+          width: $spacer * 3;
+          height: $spacer * 3;
+          border-radius: 4px;
+          background-color: #5F3E2D;
+          margin-right: $spacer;
+        }
+
+        .color-b {
+          width: $spacer * 3;
+          height: $spacer * 3;
+          border-radius: 4px;
+          background-color: #B75929;
+        }
+
+      }
+    }
+  }
+}
+
+.directionList{
+    display: flex;
+    justify-content: center;
+
+    
+
+
+    .direction{
+        a{
+            font-size: 19px;
+            padding: 11px 11px;
+            @include mobile{
+                font-size: $spacer * 2;
+            }
+        }   
+    }
+
+    .directionTo{
+        padding-bottom: $spacer * 10;
+        a{
+            font-size: 19px;
+            padding: 11px 11px;
+            background-color: #F2F2F2;
+             @include mobile{
+                font-size: $spacer * 2;
+            }
+        }
+    }
+    
+    a{
+        color: #000;
+        line-height: 27px;
+        font-size: 18px;
+         padding: 11px 11px;
+         border: 1px solid #000;
+        &:hover{
+            background-color: #000;
+            color: #fff;
+        }
+        &.active{
+            background-color: #000;
+            color: #fff;
+        }
+        @include mobile{
+                font-size: $spacer * 2;
+            }
+    }
+
+
+
+}
